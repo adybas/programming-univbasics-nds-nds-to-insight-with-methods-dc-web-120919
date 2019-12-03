@@ -7,8 +7,15 @@ require 'pry'
 # { directorOne => allTheMoneyTheyMade, ... }
 
 def directors_totals(nds)
+  directors_index = 0
   result = {}
-  nil
+
+    while directors_index < nds.length do
+      result[directors_database[directors_index][:name]] = gross_for_director(director_data)
+      directors_index += 1
+    end
+    result
+  end
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
